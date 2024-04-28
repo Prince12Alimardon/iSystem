@@ -1,10 +1,11 @@
 from django.shortcuts import render
-from .models import Course, Contact
+from .models import Course, Contact, Isystem_in_numbers
 from .forms import ContactForm
 
 
 def home(request):
-    return render(request, 'index.html')
+    isystem_nums = Isystem_in_numbers.objects.all().order_by('id').first()
+    return render(request, 'index.html', {'isystem_nums': isystem_nums})
 
 
 def courses(request):
