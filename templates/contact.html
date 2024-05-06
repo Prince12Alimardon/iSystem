@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'base2.html' %}
 {% load static %}
 {% block content %}
 
@@ -30,7 +30,7 @@
                                 <div class="popup__body bg-warning">
 
 
-                                    <form class="popup__form" method="post">
+                                    <form class="popup__form" action="/" method="post">
                                         {% csrf_token %}
                                         <input type="hidden" name="_token"
                                                value="dnwOaBdbwaBH8kaBC8Mtq8eAdfBcV8Vbfa7armjg">

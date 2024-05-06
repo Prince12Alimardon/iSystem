@@ -19014,7 +19014,8 @@ body:not(.touch-device) .header__item:hover .header__body {
   .header__item:not(:last-child) {
     margin: 0 0 24px;
   }
-  .header__item[href], .header__head {
+  .header__item[href],
+  .header__head {
     padding: 0;
     font-size: 18px;
     letter-spacing: -0.025em;
@@ -19056,9 +19057,9 @@ body:not(.touch-device) .header__item:hover .header__body {
   .stage {
     font-size: 16px;
   }
-  .main {
-    padding: 170px 0 35px;
-  }
+  /*.main {*/
+  /*  padding: 170px 0 35px;*/
+  /*}*/
   .main__wrap {
     max-width: 100%;
   }
@@ -20590,3 +20591,51 @@ a:hover {
     height: 72px;
     line-height: 1.1;
 }
+
+
+/*pulse-contact*/
+        .pulse-contact a{
+            color: #0b0b0b;
+        }
+        .pulse-contact{
+            height: 50px;
+            width: 50px;
+            background: #FFC107;
+            position: absolute;
+            margin: auto;
+            right: 30px;
+            bottom: 40px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            font-size: 25px;
+            color: #ffffff;
+        }
+
+        .pulse-contact:before,
+        .pulse-contact:after{
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: #ffd700;
+            border-radius: 50%;
+            z-index: -1;
+            opacity: 0.7;
+        }
+        .pulse-contact:before{
+            animation: pulse 2s ease-out infinite;
+        }
+        .pulse-contact:after{
+            animation: pulse 2s 1s ease-out infinite;
+        }
+        @keyframes pulse{
+            100%{
+                transform: scale(2.5);
+                opacity: 0;
+            }
+        }
+        /*pulse-contact-end*/
+
+
+
